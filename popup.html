@@ -12,22 +12,35 @@
 		table {
 			width: 100%;
 		}
+		input {
+			border: none;
+			border-bottom: 2px solid black;
+			font-family: 'Roboto';
+			text-align: center;
+		}
 	</style>
+	
 </head>
 <body>
 	<div style="display: block; margin: auto;">
-		<h1>Adjust Sleeping Time</h1>
-		<h2>When do you sleep?</h2>	
+		<h1 id="snoozeCounterElem"></h1>
+		<h2>Adjust Sleeping Time</h2>
+		<h3>When do you sleep?</h3>	
 		<table>
 			<tr>
 				<td>Start Time</td>
 				<td>End Time</td>
 			</tr>
 			<tr>
-				<td><input type="text" placeholder="Enter time here..."></td>
-				<td><input type="text" placeholder="Enter time here..."></td>
+				<td><input id="earlyLimitInput" type="text" maxlength="5" placeholder="Enter early limit..."></td>
+				<td><input id="lateLimitInput" type="text" maxlength="5" placeholder="Enter late limit..."></td>
+			</tr>
+			<tr>
+				<td><button id="earlyLimitBtn">Update</button></td>
+				<td><button id="lateLimitBtn">Update</button></td>
 			</tr>
 		</table>
 	</div>
+	<script src="popup-handler.js"></script>
 </body>
 </html>
